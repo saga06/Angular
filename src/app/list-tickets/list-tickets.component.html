@@ -1,0 +1,17 @@
+<p class="titre">MA LISTE DE TICKETS</p>
+
+<!-- <div style="margin-top: 50px">
+    <input type="text" [(ngModel)]="chaine" placeholder="Ajouter nouvelle chaine">
+    <button (click)="addChaine()">Ajouter</button>
+</div> -->
+
+<p *ngFor="let ticket of tab; let i = index">
+    N° {{i + 1}} 
+     - {{ticket}} 
+     <span class="delete" (click)="removeChaine(i)">
+       (delete)
+     </span>
+     <span class="edit" (click)="editChaine(i)">
+        (edit)
+      </span>
+   </p>
